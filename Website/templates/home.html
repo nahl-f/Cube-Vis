@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<br></br>
+<div class = 'text-center'>
+    <!-- the name of the current user is passed from views.py -->
+    <h1 align = 'center'>Hey,  {{ name }}!</h1>
+    <text align = 'center'>Pick where you'd like to go next<text>
+</div>
+<br></br>
+<body>
+    <!-- buttons that redirect user to desired location -->
+    <a href="/Timer" 
+    class="btn btn-primary btn-lg btn-block" 
+    role="button">Timer</a>
+    <a href="/Scramble-Verification" 
+    class="btn btn-primary btn-lg btn-block" 
+    role="button">Scramble Verification</a>
+    <a href="/Notation-Trainer" 
+    class="btn btn-primary btn-lg btn-block" 
+    role="button">Notation Trainer</a>
+</body>
+
+{% endblock %}

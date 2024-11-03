@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<br></br>
+<div class = 'text-center'>
+    <h4>Welcome to Scramble Verification!
+    </h4> 
+    <p class="text-info">
+        Please scramble with Green facing you and White facing upwards.<br>
+    </p>
+    <!-- sc = scramble is passed in from Scramble_Verification(), imported from _scramblegen.py -->
+    <h1>{{ sc }}</h1>
+    <div>
+    <!-- redirects to Map() in views which returns the drawn scramble, scramble map returned from scramblemap.py -->
+        <img src="{{ url_for('views.Map') }}" width="50%"/>
+    </div>
+    <!-- <h2>{% for row in cube %}
+        {{row}}
+        <br></br>
+        {% endfor %}
+    </h2>  -->
+    <br></br>
+    <a href="/S" 
+    class="btn btn-primary btn-lg btn-block" 
+    role="button">Scan Cube</a>
+</div>
+<br></br>
+
+{% endblock %}

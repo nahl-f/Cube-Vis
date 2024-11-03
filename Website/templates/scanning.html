@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <br></br>
+    <h1 align = 'center'>Scramble Verification</h1>
+    <div>
+        <!-- the video frame is passed in from views.py - frame imported from colourscanning.py -->
+        <!-- to return the frame, it is accessed from Scanner() in views.py, this allows me to display the frame on the same render template from S()-->
+        <img src="{{ url_for('views.Scanner') }}" width="100%"/>
+    </div>  
+</body>
+<br></br>
+{% endblock %}

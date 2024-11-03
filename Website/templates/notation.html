@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center">
+    <br></br>
+    <h1>It's practice time :)</h1>
+    <p class="text-info">
+        Click on the 'move' buttons to see the moves, click on the 'hide' button to hide them!<br>
+    </p>
+    <!-- Using the 'name', I can pick which image to show for the notation flaschards -->
+    <!-- Post request sent to signal button press -->
+    <form method="POST">
+        <button type="submit" name="U" class="btn btn-dark mx-2">U Moves</button>
+        <button type="submit" name="D" class="btn btn-dark mx-2">D Moves</button>
+        <button type="submit" name="R" class="btn btn-dark mx-2">R Moves</button>
+        <button type="submit" name="L" class="btn btn-dark mx-2">L Moves</button>
+        <button type="submit" name="F" class="btn btn-dark mx-2">F Moves</button>
+        <button type="submit" name="B" class="btn btn-dark mx-2">B Moves</button>
+        <button type="submit" name="M" class="btn btn-dark mx-2">M Moves</button>
+        <button type="submit" name="E" class="btn btn-dark mx-2">E Moves</button>
+        <button type="submit" name="S" class="btn btn-dark mx-2">S Moves</button>
+    <br></br>
+    <form method ="POST">
+        <button type="submit" name="H" class="btn btn-secondary mx-2">hide</button>
+    </form>
+    </form>
+</div>
+<br></br>
+<!-- image is passed in from views.py and displayed based on button press -->
+<div class = 'text-center'>
+    <img src= {{image}}
+        alt="image"
+        style="max-width:100%;" />
+</div>
+{% endblock %}
